@@ -1,0 +1,22 @@
+.loginInicio{
+    h1{
+        background-color: rgb(255, 136, 251);
+        height: 3rem;
+    }
+}
+.formInicio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    label{
+        margin-top: 1rem;
+    }
+    input{
+        margin-top: 1rem;
+    }
+    button{
+        margin-top: 1rem;
+    }
+}
