@@ -9,6 +9,11 @@ export default function Inicio() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
+    async function handleLogin(e){
+        e.preventDefault()
+    console.log(email,password)
+    }
+
     return (
         <div>
             <div className="loginInicio">
@@ -18,15 +23,23 @@ export default function Inicio() {
             </div>
             <div className="formInicio">
             
-            <form>
+            <form onSubmit={handleLogin}>
                 <label>Email:</label>
-                <input type='text' />
+                <input 
+                type='text'
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                />
                 <br />
 
                 <label>Senha:</label>
-                <input type='password' />
+                <input 
+                type='password' 
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                />
                 <br/>
-                <button>Enviar</button>
+                <button type='submit'>Enviar</button>
                <p>Se cadastra-se <Link to='/Login'>Aqui</Link></p>
             </form>
             </div>
