@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom"
 import './inicio.estilo.scss'
+import { useState } from "react"
+
 
 export default function Inicio() {
+
+
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
 
     return (
         <div>
@@ -20,12 +26,12 @@ export default function Inicio() {
                 <label>Senha:</label>
                 <input type='password' />
                 <br/>
-                
                 <button>Enviar</button>
                <p>Se cadastra-se <Link to='/Login'>Aqui</Link></p>
             </form>
             </div>
         </div>
+        //oie lucas
 
     )
 }
