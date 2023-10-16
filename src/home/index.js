@@ -7,6 +7,8 @@ export default function Inicio() {
         <div>
             <div className="loginInicio">
                 <h1><center>Login</center></h1>
+                <h2><Link to='/Dashboard'>Dashboard</Link></h2>
+                <h2><Link to='/Produtos'>Produtos</Link></h2>
             </div>
             <div className="formInicio">
             
