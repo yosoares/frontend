@@ -1,4 +1,4 @@
-import { AuthContext } from './Contexts/AuthContext';
+import AuthContext  from './Contexts/AuthContext';
 import './App.css';
 import Rotas from "./router";
 

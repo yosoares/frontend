@@ -9,20 +9,18 @@ export default function AuthProvider({ children }) {
     const [user, setUser] = useState()
     const [token, setToken] = useState('')
     
-    const isAutenticated = !!user
+    const isAutenticado = !!user
     //!!= se ele for verdadeiro
 
     //função que busque as inf. no banco de dados
 
     async function signIn({email, password}){
         try{
-            const resposta = await apiLocal.post('/Login',{
+            const resposta = await apiLocal.post('/LoginUsuario', {
                 email, password
-            } 
-            //Login - backend
-            )
-            console.log(resposta)
-            // return resposta
+            })
+            // console.log(resposta)
+            return resposta
             //retorna pro arquivo de login
             //por aqui também pode fazer a aplicação
         } catch (err) {

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import './inicio.estilo.scss'
-import { useState } from "react"
+import React, {useState, useContext} from "react"
+import {AuthContext}  from "../Contexts/AuthContext"
 
 
 export default function Inicio() {
@@ -9,9 +10,16 @@ export default function Inicio() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
+    const {signIn } = useContext(AuthContext)
+
     async function handleLogin(e){
         e.preventDefault()
-    console.log(email,password) 
+        let data = {
+            email, password
+        }
+
+        const responde = await signIn(data)
+        console.log(responde)
     //props: enviar dados de um lugar para o outro
     }
 
