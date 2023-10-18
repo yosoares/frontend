@@ -14,7 +14,7 @@ export default function AuthProvider({ children }) {
 
     //função que busque as inf. no banco de dados
 
-    async function signI({email, password}){
+    async function signIn({email, password}){
         try{
             const resposta = await apiLocal.post('/Login',{
                 email, password
@@ -31,7 +31,7 @@ export default function AuthProvider({ children }) {
     }
 
     return (
-        <AuthContext.Provider>
+        <AuthContext.Provider value={{signIn}}>
             {children}
         </AuthContext.Provider>
     )
