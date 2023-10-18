@@ -1,12 +1,14 @@
-
+import { AuthContext } from './Contexts/AuthContext';
 import './App.css';
 import Rotas from "./router";
 
 function App() {
   return (
-    <div >
-    <Rotas/>
-    </div>
+    <AuthContext>
+      <div>
+        <Rotas />
+      </div>
+    </AuthContext>
   );
 }
 
