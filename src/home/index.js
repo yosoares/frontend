@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 import './inicio.estilo.scss'
 import React, {useState, useContext} from "react"
 import {AuthContext}  from "../Contexts/AuthContext"
+import { toast } from "react-toastify"
 
 
 export default function Inicio() {
@@ -19,6 +20,16 @@ export default function Inicio() {
         }
 
         const responde = await signIn(data)
+        if (!responde){
+            toast.error('Error de login')
+            return 
+
+        } else if ( responde.status === 200){
+
+            const token = responde.data.token
+            localStorage.setItem('@tklogin2023', JSON.stringify(token))
+            toast.success('Login efetuado com sucesso')
+        }
         console.log(responde.status)
     //props: enviar dados de um lugar para o outro
     }
