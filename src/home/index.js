@@ -19,7 +19,7 @@ export default function Inicio() {
         }
 
         const responde = await signIn(data)
-        console.log(responde)
+        console.log(responde.status)
     //props: enviar dados de um lugar para o outro
     }
 
