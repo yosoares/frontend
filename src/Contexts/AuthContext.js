@@ -19,7 +19,6 @@ export default function AuthProvider({ children }) {
             const resposta = await apiLocal.post('/LoginUsuario', {
                 email, password
             })
-            // console.log(resposta)
             return resposta
             //retorna pro arquivo de login
             //por aqui também pode fazer a aplicação
