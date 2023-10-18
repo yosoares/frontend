@@ -11,7 +11,8 @@ export default function Inicio() {
 
     async function handleLogin(e){
         e.preventDefault()
-    console.log(email,password)
+    console.log(email,password) 
+    //props: enviar dados de um lugar para o outro
     }
 
     return (
